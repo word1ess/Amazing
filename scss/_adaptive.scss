@@ -1,0 +1,104 @@
+@media only screen and (max-width: 1900px){
+    .about{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        &__image{
+            grid-column-start: span 1;
+        }
+        &__gallery{
+            max-height: 400px;
+        }
+        &__gallery:nth-child(3),&__gallery:nth-child(6){
+            grid-column-start: span 2;
+        }
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+}
+
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1280px) {
+    .about{
+        grid-template-columns: repeat(3, 1fr);
+        &__image{
+            grid-column-start: span 2;
+        }
+        &__gallery, &__gallery:nth-child(3),&__gallery:nth-child(6){
+            grid-column-start: span 1;
+        }
+        &__content{
+            max-height: 500px;
+            grid-column-start: span 1;
+        }
+        &__text{
+            font-size: 26px;
+        }
+    }
+    .footer{
+        padding: 60px 0px;
+        &__row{
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .nav {
+        padding: 24px 12px;
+    }
+    .about {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        &__gallery{
+            max-height: none;
+        }
+        &__content{
+            max-height: none;
+        }
+    }
+    .music{
+        &__content{
+            padding: 16px;
+            grid-column-start: span 2;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        &__gallery{
+            height: 500px;
+        }
+    }
+    .social{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .about {
+        &__merits {
+            flex-wrap: wrap;
+            padding-bottom: 15px;
+        }
+
+        &__card {
+            flex: 0 1 50%;
+            margin: 0 0 30px 0;
+        }
+    }
+    .music{
+        &__content{
+            padding: 16px;
+            grid-column-start: span 3;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 378px) {
+    .about__body {
+        padding: 70px 15px;
+    }
+
+}
